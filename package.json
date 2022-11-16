@@ -7,7 +7,7 @@
     "url": "git+https://github.com/Echchi/wetube-reloaded.git"
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node server.js"
+    "dev": "nodemon --exec babel-node src/server.js"
   },
   "author": "Echichi",
   "license": "MIT",
