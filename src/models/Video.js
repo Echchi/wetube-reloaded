@@ -2,15 +2,15 @@ import mongoose from "mongoose";
 
 // 비디오의 형식 정의
 const videoSchema= new mongoose.Schema({
-    title: String,
+    title: { type: String, required: true },
     // = title:{type:String}
-    description: String,
-    createdAt: Date,
+    description: { type: String, required: true },
+    createdAt: { type: Date, required: true, default: Date.now },
     hashtags: [{ type: String }],
     // String 배열
     meta:{
-        views:Number,
-        rating: Number,
+        views:{ type: Number, default: 0, required: true },
+        rating: { type: Number, default: 0, required: true }
     },
 });
 
